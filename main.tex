@@ -1,0 +1,119 @@
+\documentclass{article}
+\usepackage{background}
+\backgroundsetup{
+	scale=1,
+	color=black,
+	opacity=1,
+	angle=0,
+	contents={%
+		\includegraphics[width=\paperwidth,height=\paperheight]{vellum.jpg}
+	}%
+}
+\usepackage{enumitem}
+\usepackage{indentfirst}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{titletoc}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{changepage}
+\usepackage{wrapfig}
+\usepackage[T1]{fontenc}
+\usepackage{mdframed}
+\usepackage{titlesec}
+%\titleformat*{\section}{%
+	%	\selectfont} 
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={190mm,260mm},
+	left=10mm,
+	top=10mm,
+}
+
+\usepackage{pgf}
+\usepackage{pgfpages}
+
+\pgfpagesdeclarelayout{boxed}
+{
+	\edef\pgfpageoptionborder{0pt}
+}
+{
+	\pgfpagesphysicalpageoptions
+	{%
+		logical pages=1,%
+	}
+	\pgfpageslogicalpageoptions{1}
+	{
+		border code=\pgfsetlinewidth{1pt}\pgfstroke,%
+		border shrink=\pgfpageoptionborder,%
+		resized width=1.0\pgfphysicalwidth,%
+		resized height=1.0\pgfphysicalheight,%
+		center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+	}%
+}
+
+\usepackage[skins,breakable]{tcolorbox}
+\usepackage{paracol}
+
+\newtcolorbox{breakbox}[1][]{%
+	breakable,
+	blanker
+}
+\newtcolorbox{section_header}[1][]{%
+	enhanced jigsaw, 
+	enlarge top by=-2.5cm, 
+	top=2.1cm,
+	interior style={top color=#1, bottom color=white}
+}
+
+\newtcolorbox{coloredbox}{breakable}
+
+\pgfpagesuselayout{boxed}
+
+
+\newcolumntype{Z}[1]{>{\arraybackslash}m{#1}}
+
+\newcommand{\quickref}[1]{\textcolor{violet}{\hyperref[#1]{#1}}}
+
+\newcommand{\usection}[1]{\section*{#1}\addcontentsline{toc}{section}{\protect\numberline{}#1}}
+
+\newcommand{\usubsection}[1]{\subsection*{#1}\addcontentsline{toc}{subsection}{\protect\numberline{}#1}}
+
+\newcommand{\usubsubsection}[1]{\subsubsection*{#1}\addcontentsline{toc}{subsubsection}{\protect\numberline{}#1}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlist[itemize]{itemsep=-3pt, topsep=-2pt}
+
+\title{Horus Heresy 2.0 Necrons}
+\author{ingeanus}
+\date{June 2024}
+
+\begin{document}
+	
+	\maketitle
+	
+	\tableofcontents
+	
+	\newpage
+	\input{rules}
+	
+	\newpage
+	\input{wargear}
+	
+	\newpage
+	\input{hq}
+	
+	\newpage
+	\input{troops}
+	
+	\newpage
+	\input{elites}
+	
+	
+\end{document}
