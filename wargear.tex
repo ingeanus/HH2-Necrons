@@ -121,7 +121,7 @@ Grants a 4+ Invulnerable Save.
 
 \paragraph*{Resurrection Orb} \label{Resurrection Orb}
 
-Once per battle, on your turn, the bearer can activate their Resurrection Orb. If it does, select one friendly unit with \quickref{Reanimation Protocols} within \quickref{Nodal Range}. The bearer of the Orb and the selected unit immediately \textcolor{violet}{\hyperref[Reanimation Protocols]{reassemble}} a number of wounds equal to the total number of missing wounds and number of wounds from all destroyed models.
+Once per battle, on your turn, the bearer can activate their Resurrection Orb. If it does, select one friendly unit with \quickref{Reanimation Protocols} within \quickref{Nodal Range}. The bearer of the Orb and the selected unit immediately \textcolor{violet}{\hyperref[Reanimation Protocols]{reassembles}} a number of wounds equal to the total number of missing wounds and number of wounds from all destroyed models.
 
 \paragraph*{Semipternal Weave} \label{Sempiternal Weave}
 
@@ -136,6 +136,7 @@ The bearer can use the Tesseract Labyrinth in lieu of making close combat attack
 
 \usubsection{Artefacts of the Aeons} \label{Artefacts of the Aeons}
 
+TODO: This
 
 \usubsection{Cryptek Conclaves}
 
@@ -157,11 +158,13 @@ Psychomancers must take an \quickref{Abyssal Staff} when selecting the Harbinger
 	\hline
 \end{tabular}
 
-\textbf{Shroud of Despair:} To Wound rolls are made against the target's Leadership rather than toughness. The attack has no effect against Vehicles.
+\textbf{Shroud of Despair:} To Wound rolls are made against the target's Leadership rather than Toughness. The attack has no effect against Vehicles.
 
 \usubsubsection{Atavindicator \hrulefill X pts}
 
 \usubsubsection{Nightmare Shroud \hrulefill X pts} 
+
+The bearer gains the Fear (1) rule. Additionally, the Shroud may be used during the Shooting Phase instead of firing a weapon. Choose an enemy unit within 18" of the bearer. That unit must immediately take a Morale Check.
 
 
 
@@ -177,12 +180,29 @@ Plasmancers must take an \quickref{Eldritch Lance} when selecting the Harbingers
 	Name & & Range & Type & S & AP & Abilities \\
 	\hline
 	\quickref{Eldritch Lance} (Shooting) & & 36" & Assault 1 & 8 & 2 & Lance \\
-	\quickref{Eldritch Lance} (Melee) & & — & Melee & 8 & 2 & Lance \\
+	\quickref{Eldritch Lance} (Melee) & & — & Melee & User & 2 & Lance \\
 	\hline
 \end{tabular}
 
 \usubsubsection{Quantum Orb \hrulefill X pts}
 
+Once per battle, at the start of your turn, the bearer can activate this item. If it does, select one point on the battlefield anywhere within 24" of the bearer and place a marker at that point. At the start of your next turn, resolve a S8 AP 3 Large Blast hit directly on that location.
+
+\usubsubsection{Plasmic Lance \hrulefill 0 pts}
+
+Any Plasmancer may exchange their Eldritch Lance for a Plasmic Lance.
+TODO: Probably too weak
+
+\label{Plasmic Lance}
+\noindent
+\begin{tabular}{||m{130pt} m{10pt} m{31pt} m{55pt} m{12pt} m{12pt} m{210pt}||}
+	\hline
+	Name & & Range & Type & S & AP & Abilities \\
+	\hline
+	\quickref{Plasmic Lance} (Shooting) & & 18" & Assault 3 & 7 & 3 & — \\
+	\quickref{Plasmic Lance} (Melee) & & — & Melee & User & 3 & — \\
+	\hline
+\end{tabular}
 
 
 \usubsection{Harbingers of Eternity \hrulefill X pts}
@@ -209,9 +229,24 @@ A model with a Chronometron can re-roll one of its D6 rolls each phase. If the b
 
 Provide some sort of dangerous terrain / slowing / similar minefield effects
 
+\usubsubsection{Entropic Lance \hrulefill X pts} \label{Entropic Lance}
+
+Any Chronomancer may upgrade their Aeonstave to an Entropic Lance.
+
+\noindent
+\begin{tabular}{||m{130pt} m{10pt} m{31pt} m{55pt} m{12pt} m{12pt} m{210pt}||}
+	\hline
+	Name & & Range & Type & S & AP & Abilities \\
+	\hline
+	\quickref{Entropic Lance} (Shooting) & & Assault 1 & 18" & 7 & 3 & Brutal (2), \quickref{Entropic Strike} (2+) \\
+	\quickref{Entropic Lance} (Melee) & & — & Melee & User & 3 & Brutal (2), \quickref{Entropic Strike} (2+) \\
+	\hline
+\end{tabular}
+
 \usubsubsection{Timesplinter Cloak \hrulefill X pts}
 
 A model with a Timesplinter Cloak has a 3+ Invulnerable save.
+
 
 
 \usubsection{Harbingers of Storm \hrulefill X pts}
@@ -230,7 +265,14 @@ Ethermancers must take an \quickref{Voltaic Staff} when selecting the Harbingers
 	\hline
 \end{tabular}
 
+\usubsubsection{Ether Crystal \hrulefill X pts}
+
+Any enemy unit arriving by Deep Strike within \quickref{Nodal Range} of the bearer suffers d6 S8 AP 5 hits. If they arrive within range of multiple C5rystals, only increase the number of hits by 1 for each Crystal past the first.
+
 \usubsubsection{Metalodermal Tesla Weave \hrulefill X pts}
+
+When an enemy unit successfully moves into assault with the Cryptek or his unit, the assaulting unit immediately suffers d6 S8 AP 5 hits.
+
 
 
 
@@ -238,16 +280,29 @@ Ethermancers must take an \quickref{Voltaic Staff} when selecting the Harbingers
 
 Technomancers must take a \quickref{Staff of Light} when selecting the Haringers of Technomancy as their Discipline. Additionally, they must purchase the \quickref{Rites of Reanimation} ability.
 
-
 \usubsubsection{Canoptek Cloak \hrulefill X pts}
+
+Increase the bearer's move to 12" and it gains the Fleet (1) rule alongside the Antigrav and Light sub-type.
 
 \usubsubsection{Canoptek Control Node \hrulefill X pts}
 
+Increase your \quickref{Nodal Range} to 12" for the purposes of suppressing the \quickref{Soulless Hordes} trait for units with the Canoptek sub-type.
+
 \usubsubsection{Fail-Safe Overcharger \hrulefill X pts}
+
+Psychic power thing where you have a lot of option and roll with penalties for each you want, causing wounds on fail.
+
+\begin{itemize}
+	\item Test
+\end{itemize}
 
 \usubsubsection{Phylacterine Hive \hrulefill X pts}
 
-\usubsubsection{Rites of Reanimation}
+Once per battle, when using your \quickref{Rites of Reanimation} ability, you may select a non-friendly unit with \quickref{Reanimation Protocols} (Such as Destroyer Cult or Flayer Virus units) to be affected.
+
+\usubsubsection{Rites of Reanimation} \label{Rites of Reanimation}
+
+After this model has moved, select a friendly unit with \quickref{Reanimation Protocols} within \quickref{Nodal Range} on the bearer. That unit immediately \textcolor{violet}{\hyperref[Reanimation Protocols]{reassembles}} a number of wounds equal to the number of wounds from all destroyed models (Do not include any lost wounds from non-destroyed models), but roll with a -1 modifier.
 
 
 
@@ -262,9 +317,10 @@ Geomancers and Alchemists must take an \quickref{Tremorstave} when selecting the
 	\hline
 	Name & & Range & Type & S & AP & Abilities \\
 	\hline
-	\quickref{Tremorstave} (Shooting) & & 36" & Assault 1 & 4 & — & Blast, Quake \\
-	\quickref{Tremorstave} (Melee) & & — & Melee & User & — & Quake \\
+	\quickref{Tremorstave} (Shooting) & & 36" & Assault 1 & 4 & — & Blast, Pinning, Quake \\
+	\quickref{Tremorstave} (Melee) & & — & Melee & User & — & Pinning \\
 	\hline
 \end{tabular}
+\textbf{Quake:} After resolving all wounds, leave the Blast marker in place, or otherwise mark the area. This area now counts as Difficult Terrain until the start of the next turn of the player that made the attack.
 
 \usubsubsection{Cryptogeometric Adjuster \hrulefill X pts}
