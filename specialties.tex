@@ -19,7 +19,7 @@ Psychomancers must take an \quickref{Abyssal Staff} when selecting the Harbinger
 	\hline
 \end{tabular}
 
-\textbf{Shroud of Despair:} To Wound rolls are made against the target's Leadership rather than Toughness. The attack has no effect against Vehicles. Successful wounds against Dreadnoughts and Automata must be re-rolled.
+\textbf{Shroud of Despair:} To Wound rolls are made against the target's Leadership (modified by Fear) rather than Toughness. The attack has no effect against Vehicles. Successful wounds against Dreadnoughts and Automata must be re-rolled.
 
 \usubsubsection{Atavindicator \hrulefill X pts}
 
@@ -102,17 +102,7 @@ A model with a Chronometron can re-roll one of its D6 rolls each phase. If the b
 
 \usubsubsection{Chronotendrils \hrulefill X pts}
 
-The bearer's movement speed increases to 9" and they gain the Chronotendrils weapon. TODO: Consider special abilities?
-
-\label{Chronotendrils}
-\noindent
-\begin{tabular}{||m{130pt} m{10pt} m{31pt} m{55pt} m{12pt} m{12pt} m{210pt}||}
-	\hline
-	Name & & Range & Type & S & AP & Abilities \\
-	\hline
-	\quickref{Chronotendrils} & & — & Melee & User & — & — \\
-	\hline
-\end{tabular}
+The bearer's movement speed increases to 9" and they gain the Hammer of Wrath (3) ability.
 
 \usubsubsection{Countertemporal Nanomines \hrulefill X pts}
 
@@ -374,6 +364,14 @@ All Flamer weapons (as well as Heat Rays, Burnas, Skorchas, Inferno Cannons and 
 \textbf{Transcendent:} Lord of Fire (5+)
 
 
+\usubsubsection{Gaze of the Abyss} \label{Gaze of the Abyss}
+
+If this model would be targeted by a Shooting Attack or Charge, the attacking unit must immediately make a Morale Test. Additionally, the C'Tan has the Fear ability at a level dependent on its level.
+
+\textbf{Shard:} Fear (2)
+
+\textbf{Transcendent:} Fear (3)
+
 
 \usubsubsection{Grand Illusion} \label{Grand Illusion}
 
@@ -382,5 +380,16 @@ After all forces have been deployed and all Scout moves have been made, roll a d
 
 \usubsubsection{Voltaic Storm} \label{Voltaic Storm}
 
-TODO: This
+After this model has completed its movement, target an enemy Vehicle, Dreadnought, or Automata unit within 18" with this power. Roll a D6 to determine the effect, dependent on the C'Tan's level.
+
+\begin{tabular}{|Z{15pt} Z{450pt}|}
+	\hline
+	D6 & Result \\
+	\hline
+	1 & No Effect \\
+%	2-3 & tA Vehicle Unit Type that is part of the target unit suffers 1 Glancing Hit if Shard Level, or 2 if Transcendent level. Any other model suffers 1 or 2 Wounds respectively. Only Invulnerable Saves or Damage Mitigation rolls may be taken against these. \\
+	4-5 &  A Vehicle Unit Type that is part of the target unit suffers 1 Penetrating Hit if Shard Level, or 2 if Transcendent level. Any other model suffers 1 or 2 Wounds respectively. Only Invulnerable Saves or Damage Mitigation rolls may be taken against these. Re-roll results of Crew Stunned and Explodes. \\
+	6 &  A Vehicle Unit Type that is part of the target unit suffers 1 Penetrating Hi, or 2 if Transcendent level. Any other model suffers 1 or 2 Wounds respectively. Only Invulnerable Saves or Damage Mitigation rolls may be taken against these. \\
+	\hline
+\end{tabular}
 
