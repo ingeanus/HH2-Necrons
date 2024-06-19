@@ -1,4 +1,12 @@
 \documentclass{article}
+\usepackage{amsmath}
+\DeclareFontFamily{U}{skulls}{}
+\DeclareFontShape{U}{skulls}{m}{n}{ <-> skull }{}
+\newcommand{\yellowskull}{\contour{black}{\textcolor{yellow}{\text{\usefont{U}{skulls}{m}{n}\symbol{'101}}}}}
+\newcommand{\blackskull}{\textcolor{black}{\text{\usefont{U}{skulls}{m}{n}\symbol{'101}}}}
+\newcommand{\greyskull}{\contour{black}{\textcolor{gray}{\text{\usefont{U}{skulls}{m}{n}\symbol{'101}}}}}
+\newcommand{\redskull}{\contour{black}{\textcolor{red}{\text{\usefont{U}{skulls}{m}{n}\symbol{'101}}}}}
+
 \usepackage{background}
 \backgroundsetup{
 	scale=1,
@@ -9,10 +17,13 @@
 		\includegraphics[width=\paperwidth,height=\paperheight]{vellum.jpg}
 	}%
 }
+
+\usepackage{contour}
 \usepackage{enumitem}
 \usepackage{indentfirst}
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
+\usepackage{multirow}
 \usepackage{titletoc}
 \usepackage{hyperref}
 \usepackage{xcolor}
@@ -24,6 +35,8 @@
 \usepackage{wrapfig}
 \usepackage[T1]{fontenc}
 \usepackage{mdframed}
+\usepackage{rotating}
+\usepackage{threeparttable}
 \usepackage{titlesec}
 %\titleformat*{\section}{%
 	%	\selectfont} 
@@ -95,6 +108,8 @@
 \date{June 2024}
 
 \begin{document}
+	\contourlength{0.5pt} %how thick each copy is
+	\contournumber{3}  %number of copies
 	
 	\maketitle
 	
@@ -121,5 +136,10 @@
 	\newpage
 	\input{fast_attack}
 	
+	
+	
+	
+	\newpage
+	\input{allied}
 	
 \end{document}
