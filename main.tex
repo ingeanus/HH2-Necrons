@@ -93,12 +93,6 @@
 
 \newcommand{\quickref}[1]{\textcolor{violet}{\hyperref[#1]{#1}}}
 
-\newcommand{\usection}[1]{\section*{#1}\addcontentsline{toc}{section}{\protect\numberline{}#1}}
-
-\newcommand{\usubsection}[1]{\subsection*{#1}\addcontentsline{toc}{subsection}{\protect\numberline{}#1}}
-
-\newcommand{\usubsubsection}[1]{\subsubsection*{#1}\addcontentsline{toc}{subsubsection}{\protect\numberline{}#1}}
-
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \setlist[itemize]{itemsep=-3pt, topsep=-2pt}
@@ -108,6 +102,9 @@
 \date{June 2024}
 
 \begin{document}
+	\renewcommand\thesection{}
+	\renewcommand\thesubsection{}
+	\renewcommand\thesubsubsection{}
 	\contourlength{0.5pt} %how thick each copy is
 	\contournumber{3}  %number of copies
 	
