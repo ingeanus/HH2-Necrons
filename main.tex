@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{adjustbox}
 \usepackage{amsmath}
 \DeclareFontFamily{U}{skulls}{}
 \DeclareFontShape{U}{skulls}{m}{n}{ <-> skull }{}
@@ -25,6 +26,7 @@
 \usepackage{multicol}
 \usepackage{multirow}
 \usepackage{titletoc}
+\usepackage[none]{hyphenat}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{tabularx}
@@ -83,11 +85,9 @@
 	top=2.1cm,
 	interior style={top color=#1, bottom color=white}
 }
-
 \newtcolorbox{coloredbox}{breakable}
 
 \pgfpagesuselayout{boxed}
-
 
 \newcolumntype{Z}[1]{>{\arraybackslash}m{#1}}
 
@@ -95,16 +95,22 @@
 
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\setlist[itemize]{itemsep=-3pt, topsep=-2pt}
+\setlist[itemize]{itemsep=-3pt, topsep=1pt}
 
-\hyphenation{Living Metal}
-\hyphenation{Monstrous}
-\hyphenation{Noble}
-\hyphenation{Character}
-\hyphenation{Destroyer}
-\hyphenation{Flayer}
-\hyphenation{Floating}
-\hyphenation{Line}
+\def\restofpage{\dimexpr\pagegoal-\pagetotal-\baselineskip\relax}
+\def\dotfill{\leaders\hbox{.}\hfill}
+
+\newsavebox\mysavebox
+\newenvironment{imgminipage}[2][]{%
+	\def\imgcmd{\includegraphics[width=\wd\mysavebox,height=\dimexpr\ht\mysavebox+\dp\mysavebox\relax,#1]{#2}}%
+	\begin{lrbox}{\mysavebox}%
+		\begin{minipage}%
+		}{%
+		\end{minipage}
+	\end{lrbox}%
+	\sbox\mysavebox{\fbox{\usebox\mysavebox}}%
+	\mbox{\rlap{\raisebox{-\dp\mysavebox}{\imgcmd}}\usebox\mysavebox}%
+}
 
 \title{Horus Heresy 2.0 Necrons}
 \author{ingeanus}
@@ -149,7 +155,8 @@
 	\newpage
 	\input{heavy}
 	
-	
+	\newpage
+	\input{low}
 	
 	\newpage
 	\input{allied}
