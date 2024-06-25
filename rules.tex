@@ -139,15 +139,21 @@ If multiple units are eligible to take this ability, it can only be taken by tho
 
 \subsubsection{Reanimation Protocols} \label{Reanimation Protocols}
 
-Whenever a unit with Reanimation Protocols would suffer wounds, after the opponent's unit's attacks or the effects have been resolved and models have been removed total the number of wounds that have been lost among models that were destroyed, the unit begins \textbf{reassembling} a number of wounds equal to this amount. For each wound that is being reassembled, roll a d6, subtracting 1 for wounds with Instant Death. This unit \textbf{reanimates} a wound for every 5+ roll. Each time such a unit reanimates a wound:
+Whenever a friendly unit with Reanimation Protocols suffers unsaved wounds or resolves an effect causing wounds, and casualties have been removed, total the number of wounds that have been lost among models that were destroyed and put them into a \textbf{Reassembling Pool} and a separate pool for wounds that have the Instant Death special rule.
+
+For each wound in the \textbf{Reassembling Pool}, roll a D6, subtracting 1 for wounds in the Instant Death \textbf{Reassembling Pool}. This unit is \textbf{Reanimating} a wound for every 5+ roll. Each time such a unit \textbf{Reanimates} a wound, perform the following steps:
 
 \begin{itemize}
 	\itemsep 0pt
 	\item If that unit is less than its Starting Strength, return one destroyed model to play in cohesion range with one wound remaining.
-	\item Then, if that unit is at its Starting Strength and has models that are missing any wounds, one of the models with the least wounds regains a wound. Controlling player decides in case of ties.
+	\item Then, if that unit is at its Starting Strength and has models that are missing any wounds, select a model with the lowest remaining wounds; it regains one lost wound.
 \end{itemize}
 
-When assigning wounds to units that have multiple models missing any wounds, assign them to the models with the lowest amount of wounds. In case of ties, the attacking player decides which models to apply them to.
+If the friendly unit is destroyed when Reanimation Protocols triggers, perform this process as normal, however after models have been returned from any successful \textbf{Reanimations}, resolve the remaining wounds in the triggering enemy unit's wound pool until it is empty; these remaining wounds \textit{can} cause further Reanimation Protocols triggers.
+
+When assigning wounds to units that have multiple models missing any wounds, assign them to the models with the least amount of wounds. In case of ties, the attacking player decides which models to apply them to.
+
+Certain effects can cause models to immediately begin \textbf{Reassembling} or \textbf{Reanimating}; \textbf{Reassembling} models create a \textbf{Reassembling Pool} equal to the lost wounds of those model and then roll for them as normal. \textbf{Reanimating} models immediately follow the steps for \textbf{reanimating} a number of times equal to the wounds of the destroyed model.
 
 \subsubsection{Soulless Hordes (X)} \label{Soulless Hordes}
 
@@ -162,7 +168,6 @@ The \quickref{Command Protocols} trait is able to suppress this sub-type's effec
 
 \subsubsection{Teleporation Reserves} \label{Teleporation Reserves}
 
-
 %TODO: This
 
 \subsubsection{Tesla (X)} \label{Tesla}
@@ -172,6 +177,7 @@ When firing a weapon with this special rule, a To Hit roll equal to or higher th
 \subsubsection{Tomb Guardians} \label{Tomb Guardians}
 
 Only a single unit with the Tomb Guardians rule may be used in any army which is built using the Nodal Command Force Organisation Chart and does not contain any Fortifications, should the army contain Fortifications there is no limit.
+
 
 \subsection{Unit Subtypes}
 
@@ -213,7 +219,7 @@ Models with the Flayer subtype gain a number of effects:
 	\item All models gain the Hatred (Non-Necrons) special rule. \\
 	\item All models gain the Fear (2) special rule. \\
 	\item All models gain the Deep-Strike and Infiltrate special rule, \\
-	\item All models gains the Flesh Ravager special rule, which grants: This unit is able to make Sweeping Advances. \\
+	\item All models gains the Flesh Hunters special rule, which grants: This unit is able to make Sweeping Advances. \\
 \end{itemize}
 
 \subsubsection{Floating} \label{Floating}
