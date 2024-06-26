@@ -20,6 +20,7 @@
 }
 
 \usepackage{contour}
+\usepackage{colortbl}
 \usepackage{enumitem}
 \usepackage{indentfirst}
 \usepackage[utf8]{inputenc}
@@ -37,8 +38,12 @@
 \usepackage{wrapfig}
 \usepackage[T1]{fontenc}
 \usepackage{mdframed}
+\usepackage{nicematrix}
 \usepackage{rotating}
+\usepackage{transparent}
 \usepackage{threeparttable}
+\usepackage{tikz}
+\newcommand{\cellgray}[2]{\Block[tikz={fill=gray,opacity = .25}]{1-#1}{#2}}
 \usepackage{titlesec}
 %\titleformat*{\section}{%
 	%	\selectfont} 
