@@ -17,22 +17,6 @@
 	\hline
 \end{tabular}
 
-\subsubsection{Doomsday Weapons} 
-\label{Doomsday Cannon} \label{Doomsday Blaster}
-\noindent
-\begin{tabular}{||m{110pt} m{30pt} m{31pt} m{55pt} m{12pt} m{12pt} m{210pt}||}
-	\hline
-	Name & & Range & Type & S & AP & Abilities \\
-	\hline
-	\quickref{Doomsday Blaster} & & & & & & \\
-	— Low Power &  & 24" & Ordnance 1 & 8 & 3 & Blast \\
-	— High Power & & 48" & Ordnance 1 & 10 & 1 & Large Blast, Divert Power \\
-	\quickref{Doomsday Cannon} & & & & & & \\
-	— Low Power &  & 36" & Heavy 1 & 8 & 3 & Blast \\
-	— High Power & & 72" & Heavy 1 & 10 & 1 & Large Blast, Divert Power \\
-\end{tabular}
-\textbf{Divert Power:} A vehicle can only fire a weapon with this rule if it remained stationary in its preceding Movement phase. 
-
 
 \subsubsection{Rod of Night} \label{Rod of Night}
 \noindent
@@ -122,6 +106,23 @@
 	\hline
 \end{tabular}
 
+\subsubsection{Doomsday Weapons} 
+\label{Doomsday Cannon} \label{Doomsday Blaster}
+\noindent
+\begin{tabular}{||m{110pt} m{30pt} m{31pt} m{55pt} m{12pt} m{12pt} m{210pt}||}
+\hline
+Name & & Range & Type & S & AP & Abilities \\
+\hline
+\quickref{Doomsday Blaster} & & & & & & \\
+— Low Power &  & 24" & Ordnance 1 & 8 & 3 & Blast \\
+— High Power & & 48" & Ordnance 1 & 10 & 1 & Large Blast, Divert Power \\
+\quickref{Doomsday Cannon} & & & & & & \\
+— Low Power &  & 36" & Heavy 1 & 8 & 3 & Blast \\
+— High Power & & 72" & Heavy 1 & 10 & 1 & Large Blast, Divert Power \\
+\hline
+\end{tabular}
+\textbf{Divert Power:} A vehicle can only fire a weapon with this rule if it remained stationary in its preceding Movement phase. 
+
 \subsubsection{Enmitic Weapons}
 
 \label{Enmitic Exterminator} \label{Enmitic Annihilator} \label{Enmitic Disintegrator Pistol}
@@ -144,11 +145,20 @@
 	\hline
 	Name & & Range & Type & S & AP & Abilities \\
 	\hline
-	\quickref{Gauntlet of Fire} & x pts& Template & Assault 1 & 4 & 5 & — \\
-	\quickref{Tachyon Arrow} & x pts& $\infty$ & Assault 1 & 10 & 1 & Armourbane, Destructor, One use \\
+	\quickref{Gauntlet of Fire} & & Template & Assault 1 & 4 & 5 & — \\
+	\quickref{Tachyon Arrow} & & $\infty$ & Assault 1 & 10 & 1 & Destructor, One use, Path of Annihilation \\
 	\hline
 \end{tabular}
 
+\textbf{Path of Annihilation:} When the weapon with this special rule is used to make a Shooting Attack, draw a $\frac{1}{2}$" wide line from the model up to the listed range of the weapon — this is the projectile's path.
+
+\begin{itemize}
+	\item For each model (friend and enemy) caught in the path (except the firing model), roll to hit as usual for a Shooting Attack, with each model suffering a hit if successful. Models with the Flyer sub-type are not affected unless the controlling player decides to affect \textit{only} models with the Flyer sub-type.
+	\item If a Terrain piece, Building, or model with the Vehicle Unit Type or any model with 6 or more Wounds is successfully hit and does not suffer a Penetrating Hit or unsaved Wound the attack is blocked and its path will go no further than that model. The blocking model will however, suffer D3 additional hits.
+	\item If a model with the Vehicle Unit Type and the Transport Sub-Type suffers a Penetrating Hit from a weapon with this special rule, each unit Embarked on it suffers D6 hits from the weapon, in addition to any other effects. Any Wounds caused are allocated by the controller of the target unit.
+	\item If a model with the Void Shields special rule is successfully hit by this attack and the Void Shield suffers a Penetrating Hit, immediately resolve another hit against the next Void Shield or the model itself if no Void Shields remain until an Armour Penetration roll is failed. If an Armour Penetration roll is failed against a Void shield the attack is blocked and its path will go no further than that model and it suffers no additional hits.
+	\item Successful Invulnerable Saves and Feel No Pain Damage Mitigation rolls must be re-rolled. Successful Shrouded Damage Mitigation rolls are considered to have not hit the model.
+\end{itemize}
 
 
 \subsubsection{Gauss Weapons}
