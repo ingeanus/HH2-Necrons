@@ -23,7 +23,7 @@
 \begin{tabular}{||m{110pt} m{31pt} m{55pt} m{12pt} m{12pt} m{210pt}||}
 	\quickref{Rod of Covenant} &  &  &  &  & \\
 	— Shooting & 12" & Assault 1 & 5 & 2 & — \\
-	— Melee & — & Melee & User & 2 & Two-Handed \\
+	— Melee & — & Melee & User & 2 & Breaching(6+), Two-Handed \\
 \end{tabular}
 
 \subsubsection{Rod of Night} \label{Rod of Night}
@@ -155,24 +155,14 @@ Name & & Range & Type & S & AP & Abilities \\
 	Name & & Range & Type & S & AP & Abilities \\
 	\hline
 	\quickref{Gauntlet of Fire} & & Template & Assault 1 & 4 & 5 & — \\
-	\quickref{Tachyon Arrow} & & $\infty$ & Assault 1 & 10 & 1 & Destructor, One use, Path of Annihilation \\
+	\quickref{Tachyon Arrow} & & $\infty$ & Assault 1 & 10 & 1 & Destructor, One use, \quickref{Path of Annihilation} (1) \\
 	\hline
 \end{tabular}
-
-\textbf{Path of Annihilation:} When the weapon with this special rule is used to make a Shooting Attack, draw a $\frac{1}{2}$" wide line from the model up to the listed range of the weapon — this is the projectile's path.
-
-\begin{itemize}
-	\item For each model (friend and enemy) caught in the path (except the firing model), roll to hit as usual for a Shooting Attack, with each model suffering a hit if successful. Models with the Flyer sub-type are not affected unless the controlling player decides to affect \textit{only} models with the Flyer sub-type.
-	\item If a Terrain piece, Building, or model with the Vehicle Unit Type or any model with 6 or more Wounds is successfully hit and does not suffer a Penetrating Hit or unsaved Wound the attack is blocked and its path will go no further than that model. The blocking model will however, suffer D3 additional hits.
-	\item If a model with the Vehicle Unit Type and the Transport Sub-Type suffers a Penetrating Hit from a weapon with this special rule, each unit Embarked on it suffers D6 hits from the weapon, in addition to any other effects. Any Wounds caused are allocated by the controller of the target unit.
-	\item If a model with the Void Shields special rule is successfully hit by this attack and the Void Shield suffers a Penetrating Hit, immediately resolve another hit against the next Void Shield or the model itself if no Void Shields remain until an Armour Penetration roll is failed. If an Armour Penetration roll is failed against a Void shield the attack is blocked and its path will go no further than that model and it suffers no additional hits.
-	\item Successful Invulnerable Saves and Feel No Pain Damage Mitigation rolls must be re-rolled. Successful Shrouded Damage Mitigation rolls are considered to have not hit the model.
-\end{itemize}
 
 
 \subsubsection{Gauss Weapons}
 
-\label{Gauss Cannon} \label{Gauss Blaster} \label{Gauss Flayer} \label{Gauss Reaper} \label{Relic Gauss Blaster}
+\label{Gauss Cannon} \label{Gauss Blaster} \label{Gauss Flayer} \label{Gauss Flux Arcs} \label{Gauss Reaper} \label{Relic Gauss Blaster}
 \noindent
 \begin{tabular}{||m{110pt} m{30pt} m{31pt} m{55pt} m{12pt} m{12pt} m{210pt}||}
 	\hline
@@ -180,7 +170,7 @@ Name & & Range & Type & S & AP & Abilities \\
 	\hline
 	\quickref{Gauss Cannon} & & 24" & Heavy 3 & 6 & 3 & \quickref{Gauss} (6+) \\
 	\quickref{Gauss Flayer} & & 24" & Rapid Fire & 4 & 5 & \quickref{Gauss} (6+) \\
-	\quickref{Gauss Flayer Array} & & 24" & Heavy 5 & 4 & 5 & \quickref{Gauss} (6+) \\
+	\quickref{Gauss Flux Arcs} & & 24" & Heavy 3 & 4 & 5 & \quickref{Gauss} (6+) \\
 	\quickref{Gauss Reaper} & & 12" & Assault 2 & 5 & 4 & \quickref{Gauss} (6+) \\
 	\quickref{Gauss Blaster} & & 24" & Rapid Fire & 5 & 4 & \quickref{Gauss} (6+) \\
 	\quickref{Relic Gauss Blaster} & & 30" & Rapid Fire 2 & 5 & 4 & \quickref{Gauss} (6+), Master-Crafted \\	
@@ -189,16 +179,18 @@ Name & & Range & Type & S & AP & Abilities \\
 
 \subsubsection{Particle Weapons}
 
-\label{Particle Caster} \label{Particle Beamer}
+\label{Particle Caster} \label{Particle Beamer} \label{Particle Whip}
 \noindent
 \begin{tabular}{||m{110pt} m{30pt} m{31pt} m{55pt} m{12pt} m{12pt} m{210pt}||}
 	\hline
 	Name & & Range & Type & S & AP & Abilities \\
 	\hline
 	\quickref{Particle Caster} & & 12" & Pistol 1 & 6 & 5 & \\
-	\quickref{Particle Beamer} & & 24" & Heavy 1 & 6 & 5 & Blast \\	
+	\quickref{Particle Beamer} & & 24" & Heavy 1 & 6 & 5 & Blast \\
+	\quickref{Particle Whip} & & 24" & Ordnance 1 & 8 & 3 & Discriminatory, Large Blast \\
 	\hline
 \end{tabular}
+\textbf{Discriminatory:} Friendly Necron models that are under this weapon's Blast template are never hit.
 
 \subsubsection{Synaptic Weapons}
 \label{Synaptic Disintegrator}
@@ -252,6 +244,18 @@ Grants a 3+ Invulnerable Save, but the wielder never receives +1 Attack for figh
 %TODO: This
 Some sort of vexilla style benefit.
 
+\subsubsection{Eternity Gate} \label{Eternity Gate}
+
+For each Eternity gate, at the start of each friendly turn you may choose one mode of operation:
+
+\begin{itemize}
+	\item Choose one friendly unengaged Necron unit without the Vehicle Unit-Type that is on the battlefield or in \quickref{Teleportation Reserves}. If the unit is in \quickref{Teleportation Reserves} it immediately arrives this turn (no dice roll is required) and is placed as if it were disembarking from the Monolith. If the chosen unit is currently on the battlefield it is first removed from the table and place into \quickref{Teleportation Reserves}, after which you may also place the unit as if it were disembarking from the Monolith.
+	\item All enemy models without the Vehicle Unit-Type within D6" of the Monolith's portal and in line of sight to it must make a Strength Check. Failure causes the model to be removed as a casualty with no saves allowed.
+\end{itemize}
+
+Models with an Eternity Gate can be boarded following the normal rules for Transport, however place the unit into \quickref{Teleportation Reserves} instead.
+
+
 \subsubsection{Flensing Scarabs} \label{Flensing Scarabs}
 
 During the first round of each close combat, this unit's weapons count as having the Shred special rule. Units with the Necron Dynasty (Maynarkh) special rule may also take this wargear.
@@ -259,6 +263,14 @@ During the first round of each close combat, this unit's weapons count as having
 \subsubsection{Gloom Prism} \label{Gloom Prism}
 
 This model gains the Anathema sub-type. Additionally, any psychic power targeting a unit within 3" of this model is nullified on a 4+. \\
+
+\subsubsection{Gravity Displacement Pack} \label{Gravity Displacement Pack}
+
+At the start of the controlling player’s Movement phase, a model with a Gravity Displacement Pack may set its Move Characteristic to a value of 12 for the duration of the controlling player’s turn (sometimes referred to as ‘activating’ the jump pack). This allows a model with a Gravity Displacement Pack to move up to 12", regardless of the Movement Characteristic shown on its profile and gain any other benefits of a Movement Characteristic of 12 (including the bonus to Charge distance). In addition, all models with a Gravity Displacement Pack that have been activated ignore terrain while Moving and Charging, but must take Dangerous Terrain tests as normal when beginning or ending their Movement in Dangerous Terrain. A model with an activated Gravity Displacement Pack pack may move over both friendly and enemy models or units without penalty – but must end its Movement at least 1" away from any model from another unit.
+
+A model with a Gravity Displacement Pack may still Run if it would normally be able to Run (this does not allow units that include any models with the Heavy Sub-type to Run). When making a Run move for a model with an activated Gravity Displacement Pack, add the Initiative Characteristic of that model to 12 to determine how far it may move – the model ignores terrain and models from other units while making a Run move with a Gravity Displacement Pack as previously noted, but may not make Shooting Attacks or declare a Charge in the same turn in which it has Run as per the normal rules for Running.
+
+During a Reaction made in any Phase, a player may not choose to activate a model’s Gravity Displacement Pack to gain any bonus to its Movement Characteristic.
 
 \subsubsection{Hyper-Oubliette Navigator} \label{Hyper-Oubliette Navigator}
 
@@ -312,9 +324,13 @@ The bearer and its attached unit gains the Fleet (2) special rule. When moving, 
 
 \subsubsection{Quantum Shielding} \label{Quantum Shielding}
 
-A vehicle equipped with active quantum shielding counts all of its Front and Side Armour Values as 13. A vehicle’s quantum shielding is active until it suffers a penetrating hit, at which point it immediately
+A vehicle equipped with active quantum shielding reduces the strength of attacks to its Front and Side Armour by -2. A vehicle’s quantum shielding is active until it suffers a penetrating hit, at which point it immediately
 deactivates. For the remainder of the battle after a vehicle’s quantum shielding deactivates, all subsequent hits against that vehicle (including hits made from subsequent shooting attacks in the same phase – either
 from a different weapon or a different unit – or hits made at a lower Initiative step in close combat) are treated as though the vehicle was not equipped with quantum shielding.
+
+\subsubsection{Quantum Shielding} \label{Quantum Shielding Matrix}
+
+A vehicle equipped with a Quantum Shielding Matrix and \quickref{Quantum Shielding} whose \quickref{Quantum Shielding} has been deactivated in a previous round may attempt to reactivate it. At the start of your turn, roll a D6: on a 5+ the vehicle \quickref{Quantum Shielding} reactivates and functions as normal.
 
 \subsection{Artefacts of the Aeons} \label{Artefacts of the Aeons}
 
