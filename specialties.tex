@@ -76,7 +76,7 @@ Once per game, at the start of any turn, the bearer can use this special rule. W
 
 \subsubsection[Quantum Orb ]{Quantum Orb  \hrulefill X pts}
 
-Once per battle, at the start of your turn, the bearer can activate this item. If it does, select one point on the battlefield anywhere within 24" of the bearer and place a marker at that point. At the start of your next turn, resolve a S8 AP 3 Large Blast hit directly on that location. TODO: Reaction?
+Once per battle, at the start of your turn, the bearer can activate this item. If it does, select one point on the battlefield anywhere within 24" of the bearer and place a marker at that point. At the start of your next turn, resolve a S8 AP 3 Large Blast hit directly on that location. %TODO: Reaction?
 
 
 \subsection[Harbingers of Eternity ]{Harbingers of Eternity  \hrulefill X pts}
@@ -97,7 +97,7 @@ Chronomancers must take an \quickref{Aeonstave} when selecting the Harbingers of
 
 \subsubsection[Chronometron ]{Chronometron  \hrulefill X pts}
 
-A model with a Chronometron can re-roll one of its D6 rolls each phase alongside granting a 6+ Invulnerable Save. If the bearer is in a unit, this ability can be used to instead re-roll one of the units D6 rolls each phase and provides the 6+ Invulnerable Save to the attached unit as well. In addition, this bearer is able to use the \quickref{Strategical Timeweaver} Advanced Reaction.
+A model with a Chronometron can re-roll one of its D6 rolls each phase alongside granting a 6+ Invulnerable Save. If the bearer is in a unit, this ability can be used to instead re-roll one of the units D6 rolls each phase and provides the 6+ Invulnerable Save to the attached unit as well. In addition, the bearer may make use of the \quickref{Strategical Timeweaver} Advanced Reaction.
 
 \subsubsection[Chronotendrils ]{Chronotendrils  \hrulefill X pts}
 
@@ -105,7 +105,7 @@ The bearer's movement speed increases to 9" and they gain the Hammer of Wrath (3
 
 \subsubsection[Countertemporal Nanomines ]{Countertemporal Nanomines  \hrulefill X pts}
 
-Provide some sort of dangerous terrain / slowing / similar minefield effects. %TODO: This
+Charges made against the bearer or their attached unit are always considered Disordered Charges. In addition, when measuring range between the target unit and the charging unit, consider the range as 3" longer than the actual distance during the Charge Sub-Phase.
 
 \subsubsection[Entropic Lance ]{Entropic Lance  \hrulefill X pts} \label{Entropic Lance}
 
@@ -124,8 +124,6 @@ Any Chronomancer may upgrade their Aeonstave to an Entropic Lance.
 \subsubsection[Timesplinter Cloak ]{Timesplinter Cloak  \hrulefill X pts}
 
 A model with a Timesplinter Cloak has a 3+ Invulnerable save.
-
-
 
 \subsection[Harbingers of Storm ]{Harbingers of Storm  \hrulefill X pts}
 
@@ -168,15 +166,21 @@ Increase the bearer's move to 12" and it gains the Fleet (1) rule alongside the 
 
 \subsubsection[Canoptek Control Node ]{Canoptek Control Node  \hrulefill X pts}
 
-Increase your \quickref{Nodal Range} to 12" for the purposes of suppressing the \quickref{Soulless Hordes} trait for units with the Canoptek sub-type. TODO: Reaction to shoot back better?
+Double your \quickref{Nodal Range} when determining whether a friendly Necron unit with the Canoptek Sub-Type is within it. TODO: Reaction to shoot back better?
 
 \subsubsection[Fail-Safe Overcharger ]{Fail-Safe Overcharger  \hrulefill X pts}
 
-Psychic power thing where you have a lot of option and roll with penalties for each you want, causing wounds on fail.
+At the start of the Movement Phase, this model may give up its Shooting attacks for this turn to use this power. If you do so, make a Leadership Check. Failure causes an immediate wound to the selected unit that only Invulnerability and Damage Mitigation rolls can prevent. Success allows you to select a single friendly Necron unit with the Canoptek Sub-Type with \quickref{Nodal Range} and apply one of the following effects to that unit.
 
 \begin{itemize}
-	\item Test
+	\item The chosen unit gains +1 BS until the end of the next turn.
+	\item The chosen unit gains +1 WS until the end of the next turn.
+	\item The chosen unit gains +1 A until the end of the next turn.
+	\item The chosen unit gains a 6+ Invulnerability Save until the end of the next turn.
+	\item The chose unit gains +3 M until the end of the next turn.
 \end{itemize}
+
+You may attempt to apply multiple options at once to the same unit or to multiple units within \quickref{Nodal Range} by taking a cumulative -1 penalty to your Leadership Check for each option after the first. The same option may be taken multiple times. If applying options to multiple units, a failed check causes an immediate wound to each unit as described above.
 
 \subsubsection[Phylacterine Hive ]{Phylacterine Hive  \hrulefill X pts}
 
@@ -184,7 +188,7 @@ Once per battle, when using your \quickref{Rites of Reanimation} ability, you ma
 
 \subsubsection{Rites of Reanimation} \label{Rites of Reanimation}
 
-After this model has moved, select a friendly unit with \quickref{Reanimation Protocols} within \quickref{Nodal Range} on the bearer. That unit immediately \textcolor{violet}{\hyperref[Reanimation Protocols]{reassembles}} a number of wounds equal to the number of wounds from all destroyed models (Do not include any lost wounds from non-destroyed models), but roll with a -1 modifier if the unit is not Dynastic Warriors.
+After this model has moved, select a friendly unit with \quickref{Reanimation Protocols} within \quickref{Nodal Range} on the bearer. That unit immediately \textcolor{violet}{\hyperref[Reanimation Protocols]{reassembles}} a number of wounds equal to the number of lost wounds plus the number of wounds from all destroyed models, but roll with a -1 modifier if the unit is not a Dynastic Warriors Phalanx.
 
 
 
@@ -219,9 +223,12 @@ Geomancers and Alchemists must take an \quickref{Tremorstave} when selecting the
 
 \subsubsection[Cryptogeometric Adjuster ]{Cryptogeometric Adjuster  \hrulefill X pts}
 
-%TODO: These
+At the start of your Shooting Phase, select an enemy unit within 18". Until the end of your next turn, whenever that unit measures distance for Shooting attacks or Charges, treat the distance between the attacking unit and the target as 6" longer than the actual distance for Shooting Attacks and 3" longer than the actual distance for Charges.
+
 
 \subsubsection[Seismic Crucible]{Seismic Crucible \hrulefill X pts}
+
+At the start of your Shooting Phase, select an enemy unit within 18". Until the start of your next turn, if that unit has the Vehicle Unit-Type it treats all terrain as Difficult terrain, otherwise it treats all terrain as Difficult and Dangerous terrain.
 
 
 \section{Powers of the C'Tan} \label{Powers of the C'Tan}
