@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{CrimsonPro}
+\usepackage[bitstream-charter]{mathdesign}
 \usepackage{adjustbox}
 \usepackage{amsmath}
 \DeclareFontFamily{U}{skulls}{}
@@ -58,7 +58,6 @@
 
 \usepackage{pgf}
 \usepackage{pgfpages}
-
 \pgfpagesdeclarelayout{boxed}
 {
 	\edef\pgfpageoptionborder{0pt}
@@ -118,6 +117,29 @@
 	\mbox{\rlap{\raisebox{-\dp\mysavebox}{\imgcmd}}\usebox\mysavebox}%
 }
 
+\definecolor{bronze}{rgb}{.745, .659, .525}
+\newcommand{\setbackground}{
+	\backgroundsetup{
+		scale=1,
+		color=black,
+		opacity=1,
+		angle=0,
+		contents={%
+			\includegraphics[width=\paperwidth,height=\paperheight]{marble.jpg}
+		}%
+}
+\color{bronze}}
+\newcommand{\clearbackground}{
+	\backgroundsetup{
+		scale=1,
+		color=black,
+		opacity=1,
+		angle=0,
+		contents={%
+			\includegraphics[width=\paperwidth,height=\paperheight]{vellum.jpg}
+		}%
+}
+\color{black}}
 
 \title{Horus Heresy 2.0 Necrons}
 \author{ingeanus}
@@ -150,7 +172,9 @@
 	\input{specialties}
 	
 	\newpage
-	\section{Units}
+	\setbackground
+	\section{\texorpdfstring{\centering\Huge Units}{Units}}
+	\clearbackground
 	\input{hq}
 	
 	\newpage
