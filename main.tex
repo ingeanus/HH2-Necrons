@@ -152,11 +152,11 @@
 }
 \color{black}}
 
-
+% Centering the page nubmers since they're assymetric boxes on the background
 \makeatletter
 \def\ps@myPS{%
-	\def\@oddfoot{\hspace*{24.5em}\thepage}
-	\def\@evenfoot{\hspace*{28em}\thepage}%
+	\def\@oddfoot{\centering\hspace{24.6em}\thepage}
+	\def\@evenfoot{\centering\hspace{28em}\thepage}%
 	\def\@evenhead{\null\hfil\slshape\leftmark}%
 	\def\@oddhead{{\slshape\rightmark}}}%
 \makeatother
