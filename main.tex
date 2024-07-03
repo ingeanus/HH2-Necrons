@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[twoside]{article}
 \usepackage[bitstream-charter]{mathdesign}
 \usepackage{adjustbox}
 \usepackage{amsmath}
@@ -10,13 +10,19 @@
 \newcommand{\redskull}{\contour{black}{\textcolor{red}{\text{\usefont{U}{skulls}{m}{n}\symbol{'101}}}}}
 
 \usepackage{background}
+\usepackage{ifoddpage}
 \backgroundsetup{
 	scale=1,
 	color=black,
 	opacity=1,
 	angle=0,
 	contents={%
-		\includegraphics[width=\paperwidth,height=\paperheight]{vellum.jpg}
+		\checkoddpage
+		\ifoddpage
+			\includegraphics[width=\paperwidth,height=\paperheight]{background_left.png}
+		\else
+			\includegraphics[width=\paperwidth,height=\paperheight]{background_right.png}		
+		\fi
 	}%
 }
 
@@ -51,9 +57,9 @@
 \usepackage{geometry}
 \geometry{
 	a4paper,
-	total={190mm,260mm},
-	left=10mm,
-	top=10mm,
+	inner=60pt,
+	textwidth=520pt,
+	height=710pt,
 }
 
 \usepackage{pgf}
@@ -136,10 +142,25 @@
 		opacity=1,
 		angle=0,
 		contents={%
-			\includegraphics[width=\paperwidth,height=\paperheight]{vellum.jpg}
+			\checkoddpage
+			\ifoddpage
+			\includegraphics[width=\paperwidth,height=\paperheight]{background_left.png}
+			\else
+			\includegraphics[width=\paperwidth,height=\paperheight]{background_right.png}		
+			\fi
 		}%
 }
 \color{black}}
+
+
+\makeatletter
+\def\ps@myPS{%
+	\def\@oddfoot{\hspace*{24.5em}\thepage}
+	\def\@evenfoot{\hspace*{28em}\thepage}%
+	\def\@evenhead{\null\hfil\slshape\leftmark}%
+	\def\@oddhead{{\slshape\rightmark}}}%
+\makeatother
+\pagestyle{myPS}
 
 \title{Horus Heresy 2.0 Necrons}
 \author{ingeanus}
