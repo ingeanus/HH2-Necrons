@@ -37,7 +37,13 @@
 \usepackage[none]{hyphenat}
 \usepackage{hyperref}
 \usepackage{xcolor}
-\usepackage{tabularx}
+\usepackage{tabularx,stackengine,collcell}
+	\let\endminwd\relax
+	\newcolumntype{L}[1]{>{\collectcell\xminwd l{#1}}l<{\endminwd\endcollectcell}}
+	\newcolumntype{C}[1]{>{\collectcell\xminwd c{#1}}c<{\endminwd\endcollectcell}}
+	\newcolumntype{R}[1]{>{\collectcell\xminwd r{#1}}r<{\endminwd\endcollectcell}}
+	\def\minwd#1#2#3\endminwd{\stackengine{0pt}{#3}{\rule{#2}{0pt}}{O}{#1}{F}{F}{L}}
+	\newcommand\xminwd[1]{\minwd#1}
 \usepackage{wrapfig}
 \usepackage{graphics}
 \usepackage{graphicx}
@@ -161,6 +167,13 @@
 	\def\@oddhead{{\slshape\rightmark}}}%
 \makeatother
 \pagestyle{myPS}
+
+\newcommand{\supersubsection}[1]{
+\subsection[#1]{\texorpdfstring{\centering\Large #1}{#1}}
+}
+\newcommand{\supersection}[1]{
+\section[#1]{\texorpdfstring{\centering\huge #1}{#1}}
+}
 
 \title{Horus Heresy 2.0 Necrons}
 \author{ingeanus}
