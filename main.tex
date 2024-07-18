@@ -90,20 +90,8 @@
 	}%
 }
 
-\usepackage[skins,breakable]{tcolorbox}
+\usepackage[skins,breakable,many]{tcolorbox}
 \usepackage{paracol}
-
-\newtcolorbox{breakbox}[1][]{%
-	breakable,
-	blanker
-}
-\newtcolorbox{section_header}[1][]{%
-	enhanced jigsaw, 
-	enlarge top by=-2.5cm, 
-	top=2.1cm,
-	interior style={top color=#1, bottom color=white}
-}
-\newtcolorbox{coloredbox}{breakable}
 
 \pgfpagesuselayout{boxed}
 
